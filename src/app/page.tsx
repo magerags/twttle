@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { useState, useLayoutEffect, useRef } from "react";
+import RecentPosts from "@/components/RecentPosts";
 
 export default function Home() {
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -51,7 +52,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-start pt-48 min-h-screen">
       <main className="flex flex-col items-center">
         <div
           className="text-6xl font-medium mb-4 text-gray-800"
@@ -154,20 +155,20 @@ export default function Home() {
           }}
         >
           <motion.a
-            href="/profile"
-            className="hover:text-gray-900 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            profile
-          </motion.a>
-          <motion.a
             href="/writings"
             className="hover:text-gray-900 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             writings
+          </motion.a>
+          <motion.a
+            href="/profile"
+            className="hover:text-gray-900 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            profile
           </motion.a>
           <motion.a
             href="/work"
@@ -186,6 +187,7 @@ export default function Home() {
             apps
           </motion.a>
         </motion.nav>
+        <RecentPosts animationStarted={animationStarted} />
       </main>
     </div>
   );
