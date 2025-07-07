@@ -16,7 +16,7 @@ export default function AppsPage() {
       <div className="grid grid-cols-1 gap-8">
         {apps.map((app) => (
           <Link href={app.href} key={app.name}>
-            <div className="flex items-center p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 transition-colors">
+            <div className="flex items-center p-6 border rounded-sm border-stone-200 hover:bg-stone-50 transition">
               <Image
                 src={app.icon}
                 alt={app.name}
@@ -25,8 +25,10 @@ export default function AppsPage() {
                 className="w-16 h-16 rounded-xl mr-6"
               />
               <div>
-                <h2 className="text-2xl font-bold">{app.name}</h2>
-                <p className="text-gray-700">{app.description}</p>
+                <h2 className="text-2xl font-medium text-stone-800">
+                  {app.name}
+                </h2>
+                <p className="text-stone-600">{app.description}</p>
               </div>
             </div>
           </Link>

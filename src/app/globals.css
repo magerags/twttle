@@ -5,10 +5,12 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-lexend);
+  --font-serif: var(--font-lexend), ui-serif, Georgia, serif;
+  --font-mono: var(--font-lexend), ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,5 +23,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-lexend), sans-serif;
+}
+
+p {
+  font-weight: 300;
 }

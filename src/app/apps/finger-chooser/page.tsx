@@ -3,15 +3,17 @@ import Link from "next/link";
 
 export default function FingerChooserPage() {
   return (
-    <div className="container mx-auto px-4 py-8 flex flex-col items-center text-center">
-      <Image
-        src="/ios-light.png"
-        alt="App Icon Placeholder"
-        width={128}
-        height={128}
-        className="mb-8 rounded-3xl"
-      />
-      <h1 className="text-4xl font-bold mb-6">Finger Chooser</h1>
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex items-center mb-8">
+        <Image
+          src="/ios-light.png"
+          alt="App Icon Placeholder"
+          width={64}
+          height={64}
+          className="mr-6 rounded-xl"
+        />
+        <h1 className="text-4xl font-medium">Finger Chooser</h1>
+      </div>
       <p className="text-lg mb-4 max-w-md">
         The easiest way to make group decisions — with just your fingers!
       </p>
@@ -21,8 +23,8 @@ export default function FingerChooserPage() {
       </p>
 
       <div className="mb-8 max-w-md">
-        <h2 className="text-2xl font-semibold mb-3">Perfect for:</h2>
-        <ul className="list-disc list-inside text-left space-y-1">
+        <h2 className="text-2xl font-medium mb-3">Perfect for:</h2>
+        <ul className="list-disc list-inside space-y-1">
           <li>Picking who goes first</li>
           <li>Deciding who buys the next round</li>
           <li>Settling debates</li>
@@ -33,7 +35,7 @@ export default function FingerChooserPage() {
       <p className="text-md mb-8 max-w-md">Just tap and let fate decide.</p>
 
       <div>
-        <h2 className="text-2xl font-semibold mb-2">Support</h2>
+        <h2 className="text-2xl font-medium mb-2">Support</h2>
         <p>
           For support, please email me at{" "}
           <a

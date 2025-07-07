@@ -55,7 +55,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-start pt-48 min-h-screen">
       <main className="flex flex-col items-center">
         <div
-          className="text-6xl font-medium mb-4 text-gray-800"
+          className="text-6xl mb-4 text-stone-800"
           style={{ height: "80px" }}
         >
           <div className="relative">
@@ -142,7 +142,7 @@ export default function Home() {
         </div>
 
         <motion.nav
-          className="flex gap-8 text-lg font-light text-gray-600"
+          className="flex gap-8 text-lg font-light text-stone-600"
           initial={{ opacity: 0, y: 10 }}
           animate={{
             opacity: animationStarted ? 1 : 0,
@@ -156,35 +156,27 @@ export default function Home() {
         >
           <motion.a
             href="/writings"
-            className="hover:text-gray-900 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="hover:text-stone-900 transition-colors"
           >
-            writings
+            Writings
           </motion.a>
           <motion.a
             href="/profile"
-            className="hover:text-gray-900 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="hover:text-stone-900 transition-colors"
           >
-            profile
+            Profile
           </motion.a>
           <motion.a
             href="/work"
-            className="hover:text-gray-900 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="hover:text-stone-900 transition-colors"
           >
-            work
+            Work
           </motion.a>
           <motion.a
             href="/apps"
-            className="hover:text-gray-900 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="hover:text-stone-900 transition-colors"
           >
-            apps
+            Apps
           </motion.a>
         </motion.nav>
         <RecentPosts animationStarted={animationStarted} />

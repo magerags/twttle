@@ -11,5 +11,5 @@ export default function LayoutWrapper({
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
-  return <div className={!isHomePage ? "pt-24" : ""}>{children}</div>;
+  return <div className={!isHomePage ? "pl-48" : ""}>{children}</div>;
 }

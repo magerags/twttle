@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { formatDate } from "@/utils/formatDate";
 
 interface Post {
   slug: string;
@@ -42,14 +43,15 @@ export default function RecentPosts({
           <Link
             href={`/writings/${post.slug}`}
             key={post.slug}
-            className="block p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="block p-6 border rounded-sm border-stone-200 hover:bg-stone-50 transition"
           >
-            <h3 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {post.title}
-            </h3>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              {post.abstract}
+            <p className="text-sm text-stone-500 mb-1">
+              {formatDate(post.publishedOn)}
             </p>
+            <h2 className="text-2xl font-medium tracking-tight text-stone-800 mb-2">
+              {post.title}
+            </h2>
+            <p className="font-light text-stone-700">{post.abstract}</p>
           </Link>
         ))}
       </div>
