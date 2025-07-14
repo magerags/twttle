@@ -1,3 +1,4 @@
+import { cache } from "react";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
@@ -28,6 +29,8 @@ export async function loadBlogPost(slug) {
 
   return { frontmatter, content };
 }
+
+export const getBlogData = cache(loadBlogPost);
 
 function readFile(localPath) {
   return fs.readFile(path.join(process.cwd(), localPath), "utf8");

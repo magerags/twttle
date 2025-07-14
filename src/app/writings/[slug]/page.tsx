@@ -1,8 +1,5 @@
-import { cache } from "react";
-import { loadBlogPost, getBlogPostList } from "@/utils/file-helpers";
+import { getBlogData, getBlogPostList } from "@/utils/file-helpers";
 import { MDXRemote } from "next-mdx-remote/rsc";
-
-export const getBlogData = cache(loadBlogPost);
 
 type Props = {
   params: Promise<{ slug: string }>;
