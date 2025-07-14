@@ -55,7 +55,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-start pt-48 min-h-screen">
       <main className="flex flex-col items-center">
         <div
-          className="text-6xl mb-4 text-stone-800"
+          className="text-6xl mb-4 text-stone-800 font-lexend"
           style={{ height: "80px" }}
         >
           <div className="relative">
@@ -142,7 +142,7 @@ export default function Home() {
         </div>
 
         <motion.nav
-          className="flex gap-8 text-lg font-light text-stone-600"
+          className="flex gap-8 text-xl font-light text-stone-600"
           initial={{ opacity: 0, y: 10 }}
           animate={{
             opacity: animationStarted ? 1 : 0,
@@ -156,25 +156,25 @@ export default function Home() {
         >
           <motion.a
             href="/writings"
-            className="hover:text-stone-900 transition-colors"
+            className="hover:text-stone-900 font-lexend transition-colors"
           >
             Writings
           </motion.a>
           <motion.a
             href="/profile"
-            className="hover:text-stone-900 transition-colors"
+            className="hover:text-stone-900 font-lexend transition-colors"
           >
             Profile
           </motion.a>
           <motion.a
             href="/work"
-            className="hover:text-stone-900 transition-colors"
+            className="hover:text-stone-900 font-lexend transition-colors"
           >
             Work
           </motion.a>
           <motion.a
             href="/apps"
-            className="hover:text-stone-900 transition-colors"
+            className="hover:text-stone-900 font-lexend transition-colors"
           >
             Apps
           </motion.a>

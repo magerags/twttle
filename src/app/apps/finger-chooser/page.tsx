@@ -12,18 +12,20 @@ export default function FingerChooserPage() {
           height={64}
           className="mr-6 rounded-xl"
         />
-        <h1 className="text-4xl font-medium">Finger Chooser</h1>
+        <div className="flex flex-col">
+          <h1 className="text-3xl font-medium font-lexend">Finger Chooser</h1>
+          <p className="text-lg text-stone-600">
+            The easiest way to make group decisions
+          </p>
+        </div>
       </div>
-      <p className="text-lg mb-4 max-w-md">
-        The easiest way to make group decisions — with just your fingers!
-      </p>
       <p className="text-md mb-6 max-w-md">
         Everyone places a finger on the screen, and after a few suspenseful
         seconds… one lucky finger is chosen at random.
       </p>
 
       <div className="mb-8 max-w-md">
-        <h2 className="text-2xl font-medium mb-3">Perfect for:</h2>
+        <h2 className="text-xl font-medium mb-3">Perfect for:</h2>
         <ul className="list-disc list-inside space-y-1">
           <li>Picking who goes first</li>
           <li>Deciding who buys the next round</li>
@@ -35,7 +37,7 @@ export default function FingerChooserPage() {
       <p className="text-md mb-8 max-w-md">Just tap and let fate decide.</p>
 
       <div>
-        <h2 className="text-2xl font-medium mb-2">Support</h2>
+        <h2 className="text-xl font-medium mb-2">Support</h2>
         <p>
           For support, please email me at{" "}
           <a

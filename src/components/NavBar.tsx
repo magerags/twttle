@@ -20,7 +20,10 @@ export function NavBar() {
   return (
     <header className="fixed top-0 left-0 z-50 h-full">
       <nav className="flex flex-col items-start p-8 h-full">
-        <Link href="/" className="text-xl font-medium text-stone-800 mb-8">
+        <Link
+          href="/"
+          className="text-xl font-bold font-lexend text-stone-800 mb-8"
+        >
           TWTTLE
         </Link>
         <ul className="flex flex-col items-start gap-y-6">
@@ -30,7 +33,7 @@ export function NavBar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`font-light transition-colors ${
+                  className={`font-light font-lexend transition-colors ${
                     isActive ? "text-stone-900" : "text-stone-400"
                   } hover:text-stone-900`}
                 >

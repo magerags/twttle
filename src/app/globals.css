@@ -1,16 +1,71 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/palatinolinotype_roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/palatinolinotype_italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/palatinolinotype_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/palatinolinotype_bolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("/GT-America-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("/GT-America-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("/GT-America-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url("/Sohne-Buch.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url("/Sohne-BuchKursiv.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 :root {
   --background: #fffcf9;
   --foreground: #171717;
-}
-
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-lexend);
-  --font-serif: var(--font-lexend), ui-serif, Georgia, serif;
-  --font-mono: var(--font-lexend), ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,9 +78,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-lexend), sans-serif;
+  font-family: "Sohne", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p {
-  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.font-lexend {
+  font-family: "Lexend", "Segoe UI", "San Francisco", Verdana, sans-serif;
 }

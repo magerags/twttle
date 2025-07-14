@@ -25,7 +25,7 @@ export default function AppsPage() {
                 className="w-16 h-16 rounded-xl mr-6"
               />
               <div>
-                <h2 className="text-2xl font-medium text-stone-800">
+                <h2 className="text-2xl font-semibold font-lexend text-stone-800">
                   {app.name}
                 </h2>
                 <p className="text-stone-600">{app.description}</p>

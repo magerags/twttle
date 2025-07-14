@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import Link from "next/link";
-import { formatDate } from "@/utils/formatDate";
+import PostCard from "./PostCard";
 
 interface Post {
   slug: string;
@@ -40,19 +39,13 @@ export default function RecentPosts({
     >
       <div className="grid gap-8">
         {posts.map((post) => (
-          <Link
-            href={`/writings/${post.slug}`}
+          <PostCard
             key={post.slug}
-            className="block p-6 border rounded-sm border-stone-200 hover:bg-stone-50 transition"
-          >
-            <p className="text-sm text-stone-500 mb-1">
-              {formatDate(post.publishedOn)}
-            </p>
-            <h2 className="text-2xl font-medium tracking-tight text-stone-800 mb-2">
-              {post.title}
-            </h2>
-            <p className="font-light text-stone-700">{post.abstract}</p>
-          </Link>
+            title={post.title}
+            abstract={post.abstract}
+            publishedOn={post.publishedOn}
+            slug={post.slug}
+          />
         ))}
       </div>
     </motion.div>

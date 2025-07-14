@@ -1,7 +1,6 @@
 import { cache } from "react";
 import { loadBlogPost, getBlogPostList } from "@/utils/file-helpers";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { formatDate } from "@/utils/formatDate";
 
 export const getBlogData = cache(loadBlogPost);
 
@@ -31,13 +30,17 @@ async function BlogPost({ params }: Props) {
   const post = await getBlogData(slug);
 
   return (
-    <article className="prose lg:prose-xl mx-auto py-8 px-4 max-w-3xl">
-      <p className="text-stone-600 mb-2">
-        Published on {formatDate(post.frontmatter.publishedOn)}
-      </p>
-      <h1 className="text-4xl font-medium mb-8">{post.frontmatter.title}</h1>
+    <article className="prose lg:prose-xl mx-auto py-8 px-4 max-w-2xl">
+      <h1 className="text-4xl font-bold font-lexend mb-8">
+        {post.frontmatter.title}
+      </h1>
       <div className="prose-blue whitespace-pre-wrap">
-        <MDXRemote source={post.content} />
+        <MDXRemote
+          source={post.content}
+          components={{
+            p: ({ children }) => <p className="text-lg">{children}</p>,
+          }}
+        />
       </div>
     </article>
   );
