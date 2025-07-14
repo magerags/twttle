@@ -13,9 +13,9 @@ export interface Post {
 export async function getBlogPostList() {
   const fileNames = await readDirectory("blog");
 
-  const blogPosts = [];
+  const blogPosts: Post[] = [];
 
-  for (let fileName of fileNames) {
+  for (const fileName of fileNames) {
     const rawContent = await readFile(`blog/${fileName}`);
 
     const { data: frontmatter } = matter(rawContent);
@@ -23,13 +23,13 @@ export async function getBlogPostList() {
     blogPosts.push({
       slug: fileName.replace(".mdx", ""),
       ...frontmatter,
-    });
+    } as Post);
   }
 
   return blogPosts.sort((p1, p2) => (p1.publishedOn < p2.publishedOn ? 1 : -1));
 }
 
-export async function loadBlogPost(slug) {
+export async function loadBlogPost(slug: string) {
   const rawContent = await readFile(`blog/${slug}.mdx`);
 
   const { data: frontmatter, content } = matter(rawContent);
@@ -39,10 +39,10 @@ export async function loadBlogPost(slug) {
 
 export const getBlogData = cache(loadBlogPost);
 
-function readFile(localPath) {
+function readFile(localPath: string) {
   return fs.readFile(path.join(process.cwd(), localPath), "utf8");
 }
 
-function readDirectory(localPath) {
+function readDirectory(localPath: string) {
   return fs.readdir(path.join(process.cwd(), localPath));
 }
