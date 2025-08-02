@@ -18,15 +18,15 @@ export function NavBar() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 h-full">
-      <nav className="flex flex-col items-start p-8 h-full">
+    <header className="fixed top-0 left-0 z-50 h-auto w-full backdrop-blur-lg md:h-full md:w-auto md:border-b-0 md:bg-transparent">
+      <nav className="flex h-full flex-row items-center justify-between p-4 md:flex-col md:items-start md:justify-start md:p-8">
         <Link
           href="/"
-          className="text-xl font-bold font-lexend text-stone-800 mb-8"
+          className="hidden md:block md:text-xl font-bold font-lexend text-stone-800 md:mb-8"
         >
           TWTTLE
         </Link>
-        <ul className="flex flex-col items-start gap-y-6">
+        <ul className="flex w-full flex-row justify-center gap-x-6 md:flex-col md:gap-y-6">
           {navLinks.map((link) => {
             const isActive = pathname.startsWith(link.href);
             return (
