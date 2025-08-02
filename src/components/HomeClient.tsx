@@ -62,7 +62,7 @@ export default function HomeClient({ posts }: { posts: Post[] }) {
     <div className="flex flex-col items-center justify-start pt-48 min-h-screen">
       <main className="flex flex-col items-center">
         <div
-          className="text-6xl mb-4 text-stone-800 font-lexend"
+          className="text-5xl md:text-6xl mb-4 text-stone-800 font-lexend"
           style={{ height: "80px" }}
         >
           <div className="relative">
