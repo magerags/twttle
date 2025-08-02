@@ -28,14 +28,16 @@ async function BlogPost({ params }: Props) {
 
   return (
     <article className="prose lg:prose-xl mx-auto py-8 px-4 max-w-2xl">
-      <h1 className="text-4xl font-bold font-lexend mb-8">
+      <h1 className="text-3xl md:text-4xl font-bold font-lexend mb-8">
         {post.frontmatter.title}
       </h1>
       <div className="prose-blue whitespace-pre-wrap">
         <MDXRemote
           source={post.content}
           components={{
-            p: ({ children }) => <p className="text-lg">{children}</p>,
+            p: ({ children }) => (
+              <p className="text-md md:text-lg">{children}</p>
+            ),
           }}
         />
       </div>

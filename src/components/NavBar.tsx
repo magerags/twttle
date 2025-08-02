@@ -18,7 +18,7 @@ export function NavBar() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 h-auto w-full backdrop-blur-lg md:h-full md:w-auto md:border-b-0 md:bg-transparent">
+    <header className=" h-auto w-full backdrop-blur-md md:h-full md:w-auto md:border-b-0 md:bg-transparent">
       <nav className="flex h-full flex-row items-center justify-between p-4 md:flex-col md:items-start md:justify-start md:p-8">
         <Link
           href="/"

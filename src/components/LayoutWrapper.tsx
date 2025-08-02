@@ -12,8 +12,6 @@ export default function LayoutWrapper({
   const isHomePage = pathname === "/";
 
   return (
-    <div className={!isHomePage ? "pt-24 pl-4 md:pl-48 md:pt-0" : ""}>
-      {children}
-    </div>
+    <div className={!isHomePage ? "pl-4 md:pl-48 md:pt-0" : ""}>{children}</div>
   );
 }
